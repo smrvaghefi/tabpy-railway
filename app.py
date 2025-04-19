@@ -4,9 +4,9 @@ import os
 # مسیر فایل کانفیگ
 config_file = os.path.join(os.path.dirname(__file__), 'tabpy.conf')
 
-# تنظیم پورت برای Render
+# تنظیم پورت
 port = int(os.environ.get("PORT", 9004))
 
-# اجرای سرور
+# ایجاد و اجرای سرور
 app = TabPyApp(config_file=config_file)
-app.run(host='0.0.0.0', port=port)
+app.run(port=port)  # حذف پارامتر host
