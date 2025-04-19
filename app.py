@@ -9,4 +9,4 @@ port = int(os.environ.get("PORT", 9004))
 
 
 app = TabPyApp(config_file=config_file)
-app.run(port=port)  
+app.run()  
